@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<style>
+* {
+  padding: 0;
+  margin: 0;
+}
+
+.bigBox {
+  width: 300px;
+  height: auto;
+  position: relative;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  border-left: 1px solid #666;
+  border-top: 1px solid #666;
+}
+
+th,
+td {
+  border-bottom: 1px solid #666;
+  border-right: 1px solid #666;
+  text-align: center;
+  height: 30px;
+  line-height: 30px;
+  padding: 0;
+}
+
+td span {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  border: 1px solid #DD465B;
+  font-size: 12px;
+  text-align: center;
+  line-height: 20px;
+  color: #DD465B;
+}
+
+td span.active {
+  background: #DD465B;
+  color: #ffffff;
+}
+
+.svgBox {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+}
+
+</style>
+
+<body>
+  <div class="bigBox">
+    <div class="svgBox" id="svgBox">
+      <svg width="100%" height="100%" version="1.1">
+        <line x1="30" y1="48" x2="209.5" y2="79" style="stroke:#DD465B;stroke-width:1" />
+        <line x1="209.5" y1="79" x2="149.5" y2="110" style="stroke:#DD465B;stroke-width:1" />
+        <line x1="149.5" y1="110" x2="149.5" y2="141" style="stroke:#DD465B;stroke-width:1" />
+        <line x1="149.5" y1="141" x2="89.5" y2="172" style="stroke:#DD465B;stroke-width:1" />
+        <line x1="89.5" y1="165" x2="89.5" y2="203" style="stroke:#DD465B;stroke-width:1" />
+        <line x1="89.5" y1="203" x2="149.5" y2="234" style="stroke:#DD465B;stroke-width:1" />
+      </svg>
+    </div>
+    <table>
+      <thead>
+        <tr>
+          <th>1</th>
+          <th>2</th>
+          <th>3</th>
+          <th>4</th>
+          <th>5</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><span class="active">01</span></td>
+          <td><span>02</span></td>
+          <td><span>03</span></td>
+          <td><span>04</span></td>
+          <td><span>05</span></td>
+        </tr>
+        <tr>
+          <td><span>01</span></td>
+          <td><span>02</span></td>
+          <td><span>03</span></td>
+          <td><span class="active">04</span></td>
+          <td><span>05</span></td>
+        </tr>
+        <tr>
+          <td><span>01</span></td>
+          <td><span>02</span></td>
+          <td><span class="active">03</span></td>
+          <td><span>04</span></td>
+          <td><span>05</span></td>
+        </tr>
+        <tr>
+          <td><span>01</span></td>
+          <td><span>02</span></td>
+          <td><span class="active">03</span></td>
+          <td><span>04</span></td>
+          <td><span>05</span></td>
+        </tr>
+        <tr>
+          <td><span>01</span></td>
+          <td><span class="active">02</span></td>
+          <td><span>03</span></td>
+          <td><span>04</span></td>
+          <td><span>05</span></td>
+        </tr>
+        <tr>
+          <td><span>01</span></td>
+          <td><span class="active">02</span></td>
+          <td><span>03</span></td>
+          <td><span>04</span></td>
+          <td><span>05</span></td>
+        </tr>
+        <tr>
+          <td><span>01</span></td>
+          <td><span>02</span></td>
+          <td><span class="active">03</span></td>
+          <td><span>04</span></td>
+          <td><span>05</span></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <script>
+  var arr = document.querySelectorAll('.active');
+  for (var i = 0; i < arr.length; i++) {
+    console.log(arr[i].getBoundingClientRect())
+  }
+
+  </script>
+</body>
+
+</html>

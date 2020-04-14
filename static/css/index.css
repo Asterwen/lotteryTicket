@@ -1,0 +1,16 @@
+.weui-dialog .weui-dialog__title {
+  font-size: 18px;
+}
+.weui-dialog .weui-dialog__bd {
+  font-size: 16px;
+}
+.vux-x-dialog .weui-dialog {
+  max-width: 90%;
+}
+.vux-x-dialog .weui-dialog__ft {
+  font-size: 16px;
+  line-height: 40px;
+}
+.weui-toast_text .weui-toast__content {
+  font-size: 18px;
+}
